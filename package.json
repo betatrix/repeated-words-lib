@@ -1,0 +1,15 @@
+{
+  "name": "repeated-words",
+  "version": "1.0.1",
+  "bin": {
+    "repeated-words": "./src/index.js"
+  },
+  "type": "module",
+  "author": "betatrix",
+  "license": "MIT",
+  "description": "Searches for repeated words in paragraphs of a text. Returns a file with the words found",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0"
+  }
+}
