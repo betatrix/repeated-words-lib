@@ -11,7 +11,7 @@ const program = new Command();
 program
     .name('repeated-words')
     .description('Searches for repeated words in paragraphs of a text. Returns a file with the words found')
-    .version('1.0.0')
+    .version('1.0.2')
     
 program
     .option('-t, --text <string>', 'Path of the text to be processed')
