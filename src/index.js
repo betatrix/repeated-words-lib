@@ -19,8 +19,8 @@ function mountOutputFile(wordsList) {
 }
 
 // Function to create a new file with the repeated words from each paragraph of the text
-async function createAndSaveFile(wordsList, filePath) {
-    const newFile = `${filePath}/repeatedWords.txt`;
+async function createAndSaveFile(wordsList, filePath, nameFileText) {
+    const newFile = `${filePath}/${nameFileText}.txt`;
     const wordsText = mountOutputFile(wordsList);
     
     try {
@@ -32,7 +32,7 @@ async function createAndSaveFile(wordsList, filePath) {
 }
 
 // Function to read the file and process the text
-export function processFile(text, destination) {
+export function processFile(text, destination, nameFileText) {
     fs.readFile(text, 'utf-8', (error, data) => {
         if (error) {
             console.error(chalk.red('Error to read file:'), error.message);
@@ -40,6 +40,6 @@ export function processFile(text, destination) {
         }
     
         const result = countRepeatedWordsInParagraphs(data);
-        createAndSaveFile(result, destination);
+        createAndSaveFile(result, destination, nameFileText);
     });
 }

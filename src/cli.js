@@ -8,22 +8,18 @@ const program = new Command();
 
 program
     .name('repeated-words')
-    .description('Searches for repeated words in paragraphs of a text. Returns a file with the words found')
-    .version('1.0.2')
+    .description('Processes paragraphs of text to identify repeated words and exports a file with the frequency of each word')
+    .version('1.2.3')
     
 program
     .option('-t, --text <string>', 'Path of the text to be processed')
     .option('-d, --destination <string>', 'Destination path for results file', '.')
+    .option('-n, --name-text <string>', 'Name of the file to be created ', 'repeatedWords')
     .action((options) => {
-        const { text, destination } = options;
+        const { text, destination, nameText } = options;
 
         if(!text) {
             console.error(chalk.red('Error: flag -t is missing. Type --help for additional information'));
-            return;
-        }
-
-        if(!destination) {
-            console.error(chalk.red('Error: flag -d is missing. Type --help for additional information'));
             return;
         }
 
@@ -31,7 +27,7 @@ program
         const destinationPath = path.resolve(destination);
 
         try {
-            processFile(textPath, destinationPath);
+            processFile(textPath, destinationPath, nameText);
         } catch (error) {
             console.error(chalk.red('Error: An error occurred while processing the file', error));
         }
