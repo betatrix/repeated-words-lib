@@ -1,18 +1,18 @@
 import fs from 'fs';
 import chalk from 'chalk';
 import { countRepeatedWordsInParagraphs } from './paragraphWordCounter.js';
-import { convertArrayObjectToArray } from './helpers.js';
+import { objectToFormattedArray } from './helpers.js';
 
 // Join a list of words into a text
 function mountOutputFile(wordsList) {
     let finalText = '';
     
     wordsList.forEach((paragraph, index) => {
-        const repeated = convertArrayObjectToArray(paragraph).join(', ');
+        const repeated = objectToFormattedArray(paragraph).join(', ');
         
         if(!repeated) return;
         
-        finalText += `Repeated words on paragraph ${index + 1}: ${repeated} \n`;
+        finalText += `Repeated words on paragraph ${index + 1} - ${repeated} \n`;
     });
     
     return finalText;
