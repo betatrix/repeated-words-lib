@@ -1,4 +1,4 @@
-# Repeated Words Lib
+# Repeated Words
 
 Processes paragraphs of text to identify repeated words and exports a file with the frequency of each word.
 
