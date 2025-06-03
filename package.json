@@ -1,13 +1,27 @@
 {
   "name": "repeated-words",
-  "version": "1.0.3",
+  "version": "1.1.3",
   "bin": {
     "repeated-words": "./src/cli.js"
   },
   "type": "module",
   "author": "betatrix",
   "license": "MIT",
-  "description": "Searches for repeated words in paragraphs of a text. Returns a file with the words found",
+  "description": "Processes paragraphs of text to identify repeated words and exports a file with the frequency of each word",
+  "repository": "betatrix/repeated-words-lib",
+  "keywords": [
+    "npm",
+    "package",
+    "text",
+    "repeated",
+    "duplicate",
+    "words",
+    "txt",
+    "cli",
+    "console",
+    "shell",
+    "command-line"
+  ],
   "dependencies": {
     "chalk": "^5.4.1",
     "commander": "^14.0.0"
