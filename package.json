@@ -1,8 +1,8 @@
 {
   "name": "repeated-words",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "bin": {
-    "repeated-words": "./src/index.js"
+    "repeated-words": "./src/cli.js"
   },
   "type": "module",
   "author": "betatrix",
