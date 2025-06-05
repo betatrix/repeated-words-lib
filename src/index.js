@@ -2,8 +2,4 @@ import { countRepeatedWordsInParagraphs } from "./service/paragraphWordCounter.j
 import { processFile } from "./service/fileManipulation.js";
 import { objectToFormattedArray } from "./utils/formattingUtils.js";
 
-export { 
-    countRepeatedWordsInParagraphs, 
-    processFile, 
-    objectToFormattedArray 
-};
+export { countRepeatedWordsInParagraphs, processFile, objectToFormattedArray };

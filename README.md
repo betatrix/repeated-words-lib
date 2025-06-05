@@ -6,7 +6,7 @@ Processes paragraphs of text to identify repeated words and exports a file with 
 
 ## Install
 
-``` cmd
+```cmd
 npm install repeated-words
 ```
 
@@ -14,13 +14,13 @@ npm install repeated-words
 
 In the terminal, type:
 
-``` cmd
+```cmd
 repeated-words -t /path/to/my_text.txt -d /path/result/destination
 ```
 
 If you want the text file to be created in the root folder where the command is being executed:
 
-``` cmd
+```cmd
 repeated-words -t /path/to/my_text.txt
 ```
 
