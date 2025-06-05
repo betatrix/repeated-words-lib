@@ -2,7 +2,7 @@
 import path from 'path';
 import { Command } from 'commander';
 import chalk from 'chalk';
-import { processFile } from './index.js';
+import { processFile } from '../index.js';
 
 const program = new Command();
 
