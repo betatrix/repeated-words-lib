@@ -3,10 +3,21 @@ import {
   extractParagraphs,
   verifyRepeatedWords,
 } from "../src/index.js";
-import { readFile } from "./fixtures/readFile.js";
+import { readFile } from "./utils/fileUtils.js";
+import { jest } from "@jest/globals";
 
 const fileContentText = readFile("sample-text");
 const fileContentParagraph = readFile("sample-paragraph");
+
+beforeEach(() => {
+  jest.spyOn(console, "log").mockImplementation(() => {});
+  jest.spyOn(console, "error").mockImplementation(() => {});
+});
+
+afterEach(() => {
+  console.log.mockRestore();
+  console.error.mockRestore();
+});
 
 describe("countRepeatedWordsInParagraphs", () => {
   test("should return an array of objects with repeated words in the text paragraphs", () => {
@@ -38,9 +49,9 @@ describe("extractParagraphs", () => {
   });
 
   test("should return empty array when receive an empty text", () => {
-    const input = extractParagraphs('');
-    const expected = ['']
-    
+    const input = extractParagraphs("");
+    const expected = [""];
+
     expect(input).toStrictEqual(expected);
   });
 });
@@ -55,15 +66,11 @@ describe("verifyRepeatedWords", () => {
 
   test("should return null if there is no repeated word", () => {
     const input = verifyRepeatedWords("Lorem ipsum");
-    const expected = null;
-
-    expect(input).toStrictEqual(expected);
+    expect(input).toBeNull();
   });
 
   test("should return null if there is  empty string", () => {
     const input = verifyRepeatedWords("");
-    const expected = null;
-
-    expect(input).toStrictEqual(expected);
+    expect(input).toBeNull();
   });
 });

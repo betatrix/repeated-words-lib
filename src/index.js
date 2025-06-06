@@ -8,7 +8,7 @@ import {
   mountOutputFile,
   processFile,
 } from "./service/fileManipulation.js";
-import { objectToFormattedArray } from "./utils/formattingUtil.js";
+import { objectToFormattedArray } from "./utils/formattingUtils.js";
 
 export {
   countRepeatedWordsInParagraphs,
