@@ -1,3 +1,10 @@
-# Ignore artifacts:
-build
-coverage
+# ignore everything
+**.*
+# filetypes want to format
+!**.js
+!**.mjs
+!**.cjs
+!**.ts
+!**.mts
+!**.cts
+!**.json
