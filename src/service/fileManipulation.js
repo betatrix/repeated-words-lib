@@ -4,7 +4,7 @@ import { countRepeatedWordsInParagraphs } from "../index.js";
 import { objectToFormattedArray } from "../index.js";
 
 // Join a list of words into a text
-function mountOutputFile(wordsList) {
+export function mountOutputFile(wordsList) {
   let finalText = "";
 
   wordsList.forEach((paragraph, index) => {
@@ -19,7 +19,7 @@ function mountOutputFile(wordsList) {
 }
 
 // Function to create a new file with the repeated words from each paragraph of the text
-async function createAndSaveFile(wordsList, filePath, nameFileText) {
+export async function createAndSaveFile(wordsList, filePath, nameFileText) {
   const newFile = `${filePath}/${nameFileText}.txt`;
   const wordsText = mountOutputFile(wordsList);
 

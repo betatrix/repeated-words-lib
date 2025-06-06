@@ -1,10 +1,10 @@
 // function to extract paragraphs from a text
-function extractParagraphs(text) {
+export function extractParagraphs(text) {
   return text.toLowerCase().split("\n");
 }
 
 // function to check repeated words in a paragraph and create an object with the results
-function verifyRepeatedWords(text) {
+export function verifyRepeatedWords(text) {
   const words = text.split(/[^a-zA-Z0-9À-ÿ]+/g);
   const filterWords = words.filter((word, index, self) => {
     return self.indexOf(word) !== index && word.length >= 3;
