@@ -15,7 +15,11 @@ export function removeFile(filePath, nameFileText) {
   return fs.unlinkSync(fullPath);
 }
 
-export function searchFile(filePath, nameFileText) {
+export function verifyFileExists(filePath, nameFileText) {
   const fullPath = path.join(filePath, `${nameFileText}.txt`);
   return fs.existsSync(fullPath);
+}
+
+export function getAllFilePath(filePath, nameFileText) {
+  return path.join(filePath, `${nameFileText}.txt`);
 }
